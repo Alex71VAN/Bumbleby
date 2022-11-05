@@ -1,0 +1,207 @@
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ git version
+git version 2.38.0.windows.1
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ git config --global user.name "alex71"
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ git config --global user.email "my@avaschenko.ru"
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ ssh-keygen -t ed25519 -C "my@avaschenko.ru"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/Работа/.ssh/id_ed25519):
+Created directory '/c/Users/\320\240\320\260\320\261\320\276\321\202\320\260/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Работа/.ssh/id_ed25519
+Your public key has been saved in /c/Users/Работа/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:CGhj3gzO99PwHS19FimBdUpUCtXiGPqk6jw6f1ZpCzs my@avaschenko.ru
+The key's randomart image is:
++--[ED25519 256]--+
+|          .=*oo  |
+|   .      oo.=.. |
+|  * .    . ++.o  |
+| * = . .. oo.. . |
+|  + + o S+o.o o  |
+|   . . +o.=o o   |
+|      o.o=..     |
+|    ..o.E .      |
+|    .=++ .       |
++----[SHA256]-----+
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ eval "$(ssh-agent -s)"
+Agent pid 2077
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ ssh-add ~/.ssh/id_ed25519
+Identity added: /c/Users/Работа/.ssh/id_ed25519 (my@avaschenko.ru)
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIERkP0+gkrkc7IATJiU0UjV7wa1mdmaztLvf3NyWJtQR my@avaschenko.ru
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ mkdir bumbleby
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~
+$ cd bumbleby
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby
+$ git init
+Initialized empty Git repository in C:/Users/Работа/bumbleby/.git/
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ echo'spasibo za lekciyu' > README.md
+bash: echospasibo za lekciyu: command not found
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ echo 'spasibo za lekciyu' > README.md
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git commit -m 'add file readme'
+[master (root-commit) 8b46359] add file readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git remote add origin git@github.com:Alex71VAN/Bumbleby.git
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (master)
+$ git branch -M main
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git push -u origin main
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 229.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Alex71VAN/Bumbleby.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "\320\226\320\270\320\267\320\275\320\265\320\275\320\275\321\213\320\271 \321\206\320\270\320\272\320\273 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+        "\320\227\320\260\321\200\320\265\320\263\320\265\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\320\275 \320\261\320\260\320\263.xmind"
+        "\320\236\320\261\321\212\320\265\320\272\321\202 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git add--all
+git: 'add--all' is not a git command. See 'git --help'.
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "\320\226\320\270\320\267\320\275\320\265\320\275\320\275\321\213\320\271 \321\206\320\270\320\272\320\273 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+        "\320\227\320\260\321\200\320\265\320\263\320\265\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\320\275 \320\261\320\260\320\263.xmind"
+        "\320\236\320\261\321\212\320\265\320\272\321\202 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git add --all
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "\320\226\320\270\320\267\320\275\320\265\320\275\320\275\321\213\320\271 \321\206\320\270\320\272\320\273 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+        new file:   "\320\227\320\260\321\200\320\265\320\263\320\265\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\320\275 \320\261\320\260\320\263.xmind"
+        new file:   "\320\236\320\261\321\212\320\265\320\272\321\202 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git commit -m 'add files xmind'
+[main bb1447d] add files xmind
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 "\320\226\320\270\320\267\320\275\320\265\320\275\320\275\321\213\320\271 \321\206\320\270\320\272\320\273 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+ create mode 100644 "\320\227\320\260\321\200\320\265\320\263\320\265\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\320\275 \320\261\320\260\320\263.xmind"
+ create mode 100644 "\320\236\320\261\321\212\320\265\320\272\321\202 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217.xmind"
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 268.85 KiB | 852.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Alex71VAN/Bumbleby.git
+   8b46359..bb1447d  main -> main
+branch 'main' set up to track 'origin/main'.
+
+Работа@LAPTOP-7V88RBA4 MINGW64 ~/bumbleby (main)
+$
